@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Computational Genomics 2020 Team 1 - Web Server Group</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel ="stylesheet" href = "./static/template.css">
+  <link rel="icon" href="https://img.icons8.com/color/96/000000/bacteria.png" />
+  <style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-color:black
+    }
+
+/*    li {
+
+    display: inline;
+    }
+
+    li a {
+    padding: 20px;
+    }*/
+
+    .page-title{
+      text-align: center;
+      font-family: "Cambria";
+      font-size: 30px;
+    }
+
+    .inner{
+      width:1000px;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-bottom: 0px;
+      margin-left: auto;
+      position: relative;
+
+    }
+
+    .row{
+      width:1000px;
+      clear: both;
+      display:table;
+    }
+
+    .row::before, .row::after{
+      content:"";
+      display:table;
+    }
+
+    .col{
+      float:left;
+
+    }
+
+    .col-4{
+      width:33.3333%
+      max-width:33.3333%;
+    }
+
+    .col-2{
+      width:16.6667%;
+    }
+
+    .block{
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 17px;
+      padding-right: 17px;
+      clear: both;
+      position:relative;
+      height:auto;
+      outline:none;
+      text-align: center;
+    }
+
+    .img{
+      position: center;
+      text-align: center;
+    }
+
+    .caption{
+      font-family: "Cambria";
+      color: #232323;
+    }
+
+    .caption a:link{
+      text-decoration: none;
+      color: black;
+    }
+
+    .caption a:visited{
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Add a blue background color to navbar links on hover */
+/*    .caption a:hover {
+      background-color: #2a9df4;
+    }*/
+
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+  <h1  style="color: white; font-size: 80px;" align="center">ECHO</h1>
+  <a href="./home.html" >Home</a>
+  <a href="./team.html" >Team</a>
+  <div class="dropdown">
+      <button class="dropbtn">Analyze
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+            <a href="./analyze.html" >General Pipeline</a>
+            <a href="./individual_pages/genome_assembly.html" target="_parent">Genome Assembly</a>
+            <a href="./individual_pages/genome_prediction.html" target="_parent">Gene Prediction</a>
+            <a href="./individual_pages/functional_annotation.html" target="_parent">Functional Annotation</a>
+            <a href="./individual_pages/comparative_genomics.html" target="_parent">Comparative Genomics</a>
+        </div>
+    </div>
+  <a href="https://compgenomics2020.biosci.gatech.edu/Main_Page" target="_parent">Wiki</a>
+  <a href="class_results.html" target="_parent">Class results</a>
+</div>
+
+<div>
+    <h1 class="page-title"> About Us </h1>
+    <p> </p>
+    <p> </p>
+</div>
+
+<div>
+  <div class="inner">
+    <div class="row">
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Maria-Ahmad">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/thumb/1/1c/Maria_Ahmad.jpeg/675px-Maria_Ahmad.jpeg" style="width:90px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Ahmad, Maria</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:mahmad42@gatech.edu" target="_blank">mahmad42@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Hira-Anis">
+              <img src="https://bioinformatics.gatech.edu/sites/default/files/styles/people_pics/public/pictures/picture-902-1568046271.jpg?itok=-lsMiYXi" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Anis, Hira</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:hanis3@gatech.edu" target="_blank">hanis3@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Hyeonjeong-Cheon">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/8/86/Hcheon6.jpeg" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Cheon, Hyeonjeong</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:hcheon6@gatech.edu" target="_blank">hcheon6@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="shuheng" class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Shuheng-Gan">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/7/72/Picture-905-1568176366.jpg" alt="shuheng" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Gan, Shuheng</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:shuheng.gan@gatech.edu" target="_blank">shuheng.gan@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Kenji-Gerhardt">
+              <img src="https://bioinformatics.gatech.edu/sites/default/files/styles/people_pics/public/pictures/picture-896-1569958898.jpg?itok=ZEZNQ4vQ" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Gerhardt, Kenji Allen</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:kgerhardt6@gatech.edu" target="_blank">kgerhardt6@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="devishi" class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Devishi-Kesar">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/6/6f/Dkesar3.jpg" alt="devishi" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Kesar, Devishi</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:dkesar3@gatech.edu" target="_blank">dkesar3@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/f/f9/LawrenceMcKinney_pic.png" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">McKinney, Lawrence</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:lmckinney8@gatech.edu" target="_blank">lmckinney8@gatech.edu</a>
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Laura-Mora">
+              <img src="https://bioinformatics.gatech.edu/sites/default/files/styles/people_pics/public/pictures/picture-914-1568207113.jpg?itok=Wn4zL8JV" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Mora, Laura Maria</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:lmora7@gatech.edu" target="_blank">lmora7@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Jessica-Mulligan">
+              <img src="https://bioinformatics.gatech.edu/sites/default/files/styles/people_pics/public/pictures/picture-915-1571337619.jpg?itok=zHtEY0ie" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Mulligan, Jessica R</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:jmulligan9@gatech.edu" target="_blank">jmulligan9@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="priya" class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Priya-Narayanan">
+              <img src="https://bioinformatics.gatech.edu/sites/default/files/styles/people_pics/public/pictures/picture-916-1568252937.jpg?itok=lzZi_eBw" alt="priya" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Narayanan, Priya</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:pnarayanan34@gatech.edu" target="_blank">pnarayanan34@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Heather-Patrick">
+              <img src="https://bioinformatics.gatech.edu/sites/default/files/styles/people_pics/public/pictures/picture-708-1474028949.jpg?itok=YHuQabte" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Patrick, Heather</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:hpatrick3@gatech.edu" target="_blank">hpatrick3@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="aaron" class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Aaron-Pfennig">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/9/93/Aaron.JPG" alt="aaron" style="width:80px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Pfennig, Aaron Ruben</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:apfennig3@gatech.edu" target="_blank">apfennig3@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col col-4">
+        <div class="block">
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Manasa-Vegesna">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/thumb/a/af/Manasa.jpeg/675px-Manasa.jpeg" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Vegesna, Manasa</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:mvegesna3@gatech.edu" target="_blank">mvegesna3@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="winnie" class="col col-4">
+        <div class="block" >
+          <div class="content" width="350" width="350" frameborder="0">
+            <a href="https://bioinformatics.gatech.edu/people/Winnie-Zheng">
+              <img src="https://compgenomics2020.biosci.gatech.edu/images/d/d9/Beauty_1578691355968.JPG" alt="winnie" style="width:98px;height:120px;">
+              <div class="caption">
+                <p style="text-align:center;white-space:pre-wrap;" class="">Zheng, Winnie</p>
+                <p style="text-align:center;" class="">
+                  <a href="mailto:yuewenz@gatech.edu" target="_blank">yuewenz@gatech.edu</a>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

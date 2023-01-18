@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel ="stylesheet" href = "./static/template.css">
+    <link rel="icon" href="https://img.icons8.com/color/96/000000/bacteria.png" />
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-color:blue
+      }
+
+      li {
+        display: inline;
+      }
+
+      li a {
+        padding: 20px;
+      }
+
+      .box{
+        border:2px; 
+        border-style:solid; 
+        /*border-color:#2a9df4; */
+        border-color:#3abfbf;
+        /*background-color: #187bcd;*/
+        /*background-color: #ade6e6;*/
+        background-color: white;
+        /*background-color: #83A2F6;*/
+        /*border-collapse: separate;
+        border-spacing: 20px 20px;*/
+        margin:20px 20px; 
+        /*width:75%;*/
+        width: 800px;
+        height: auto;
+        padding: 20px 20px;
+        text-align: left;
+      
+      }
+
+      .step{
+        text-align: center;
+        font-family: "Cambria";
+        font-size: 24px;
+        color: #fffaf0;
+        /*color: #add8e6;*/
+      }
+
+      .explain{
+        text-align: center;
+        font-family: "Cambria";
+        font-size: 18px;
+        /*color: #ade6e6;*/
+        color:#d4f2f2;
+      }
+
+      img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+    </style>
+
+    <meta charset="utf-8">
+
+    <title>Class results</title>
+  <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  </head>
+  
+  <body>
+    
+    <div class="navbar">
+      <h1  style="color: white; font-size: 80px;" align="center">ECHO</h1>
+      <a href="./home.html" >Home</a>
+      <a href="./team.html" >Team</a>
+      <div class="dropdown">
+          <button class="dropbtn">Analyze
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+                <a href="./analyze.html" >General Pipeline</a>
+                <a href="./individual_pages/genome_assembly.html" target="_parent">Genome Assembly</a>
+                <a href="./individual_pages/genome_prediction.html" target="_parent">Gene Prediction</a>
+                <a href="./individual_pages/functional_annotation.html" target="_parent">Functional Annotation</a>
+                <a href="./individual_pages/comparative_genomics.html" target="_parent">Comparative Genomics</a>
+            </div>
+        </div>
+
+      <a href="https://compgenomics2020.biosci.gatech.edu/Main_Page" target="_parent">Wiki</a>
+    <a href="class_results.html" target="_parent">Class results</a>
+    </div>
+    
+    <div>
+      <h1 class="page-title">Class results</h1>
+    </div>
+
+    <div class="class_results" align="center">
+
+      <div class="box" align="center">
+	We have analyzed 50 E.coli isolates, including epi data, with respect to a foodborn outbreak. The data has been analyzed using this web server and the final results are presented below. We analyzed the data by performing de-novo genome assembly, gene prediction, functional annotation and comparative genomics. We have paid special attention to the virulence factors, possible food sources and the outbreak location.
+      </div>
+      <div class="box" align="center">
+         First, we have chosen one our isolates as reference and have determined the Average Nucleotide Identity of all other isolates with respect to our selected reference. Three isolates have a relatively low ANI of approximately 84%. Three other isolates have an ANI between 97-98% signifying some differences in regions of the genome with respect to the reference. All other 44 isolates are closely related to the reference genome with an ANI of approximately 99%. To determine the ANI MUMMER-4.0 has been used which has low resolution and does not discriminate more details about differences between highly similar genomes. The plot below shows the ANIs with respect to the reference genome:	
+      </div>
+      <img src="../plots/mummer.png" alt="MUMMER-4.0">
+      <div class="box" align="center">
+         Subsequently, we have performed MLST analysis using chewBBACA to create a schema and do allele calling on the asssembled genomes of the 50 isolates. Thereby, cluster cluster outbreak isolates have been identified. These preliminary results combined with epidemiological data allowed to narrow down outbreak locations. The results were visualized using Grapetree and are shown below:	
+      </div>
+      <img src="../plots/mlst.png" alt="MLST">
+      <div class="box" align="center">
+        In our strain analysis we incorporated functional annotation results. The results supported with the results from the MLST analysis yielding hints on three food sources: melons, chorizo and bananas which are all served at certain brunch places. Futhermore, we asked the question whether these clear strains, possessed of clear genetic relatedness, are treatable in similar fashion. Therefore, these strains have been analyzed using deepARG and (fortunately) they are identical on this basis and vulnerable to phenicol and sulfonamides. The insights gained from the MLST analysis, strain analysis and epidemiological data is depicted below:
+      </div>
+      <img src="../plots/epidata.png" alt="epidata">
+      <div class="box" align="center">
+        In addition SNP analysis has been performed using kSNP 3.0. The optimal k-mer size has been determined using Kchooser which yields, as a nice feature, the fraction of kmers that are present in all genomes. The FCK value is a measure of sequence diversity and hence a measure of relatedness. The lower the FCK, the more diverse and hence the more distantly related. The FCK is 0.422. Studies have shown  when FCK is ≥ 0.1 SNP detection efficiency is adequate, and the accuracy of parsimony trees estimated by kSNP3 is > 97%; i.e. the trees can be considered to be reliable.​ The tree is shown below:
+      </div>
+      <img src="../plots/ksnp.png" alt="ksnp">
+      <div class="box" align="center" text-aling="left">
+	<strong>References</strong><br>
+    1. Maiden MC, Jansen van Rensburg MJ, Bray JE, et al. MLST revisited: the gene-by-gene approach to bacterial genomics. Nat Rev Microbiol. 2013;11(10):728-36.​<br>
+
+    2. Marçais G, Delcher AL, Phillippy AM, Coston R, Salzberg SL, et al. (2018) MUMmer4: A fast and versatile genome alignment system. PLOS Computational Biology 14(1): e1005944. https://doi.org/10.1371/journal.pcbi.1005944​<br>
+
+    3. Perez-Losada M, Arenas M, Castro-Nallar E. Microbial sequence typing in the genomic era. Infection, Genetics and Evolution. 2018;63:346-359. http://dx.doi.org/10.1016/j.meegid.2017.09.022​<br>
+
+    4. Strockbine N, Bopp C, Fields P, Kaper J, Nataro J. 2015. Escherichia, Shigella, and Salmonella, p 685-713. In Jorgensen J, Pfaller M, Carroll K, Funke G, Landry M, Richter S, Warnock D (ed), Manual of Clinical Microbiology, Eleventh Edition. ASM Press, Washington, DC. doi: 10.1128/9781555817381.ch37​<br>
+
+    5. Sultan, I., Rahman, S., Jan, A. T., Siddiqui, M. T., Mondal, A. H., & Haq, Q. M. R. (2018). Antibiotics, Resistome and Resistance Mechanisms: A Bacterial Perspective. Frontiers in Microbiology, 9(2066). doi:10.3389/fmicb.2018.02066​<br>
+
+    6. Trees E, Rota P, Maccannell D, Gerner-smidt P.. Molecular Epidemiology, p 131-159. In Jorgensen J, Pfaller M, Carroll K, Funke G, Landry M, Richter S, Warnock D (ed), Manual of Clinical Microbiology, Eleventh Edition. ASM Press, Washington, DC. 2015. doi: 10.1128/9781555817381.ch10​<br>
+
+    7. Silva M, Machado M, Silva D, Rossi M, Moran-Gilad J, Santos S, Ramirez M, Carriço J. 15/03/2018. M Gen 4(3): doi:10.1099/mgen.0.000166​<br>
+
+    8. Z Zhou, NF Alikhan, MJ Sergeant, N Luhmann, C Vaz, AP Francisco, JA Carrico, M Achtman (2018) "GrapeTree: Visualization of core genomic relationships among 100,000 bacterial pathogens", Genome Res; doi: https://doi.org/10.1101/gr.232397.117
+      </div>
+    </div>
+
+  </body>
+</html>

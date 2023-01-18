@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel ="stylesheet" href = "./static/template.css">
+    <link rel="icon" href="https://img.icons8.com/color/96/000000/bacteria.png" />
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-color:blue
+      }
+
+      .box{
+        border:4px; 
+        border-radius: 15px 50px 15px;
+        border-style:solid; 
+        /*border-color:#2a9df4; */
+        border-color:#3abfbf;
+        /*background-color: #187bcd;*/
+        /*background-color: #ade6e6;*/
+        background-color: #72d4d4;
+        /*background-color: #83A2F6;*/
+        /*border-collapse: separate;
+        border-spacing: 15px 50px;*/
+        margin:20px auto; 
+        /*width:25%;*/
+        width: 500px;
+        height: 100px;
+        padding: 20px 0;
+      }
+
+      .step{
+        text-align: center;
+        font-family: "Cambria";
+        font-size: 24px;
+        color: #fffaf0;
+        /*color: #add8e6;*/
+      }
+
+      .explain{
+        text-align: center;
+        font-family: "Cambria";
+        font-size: 18px;
+        /*color: #ade6e6;*/
+        color:#d4f2f2;
+      }
+
+      .page-title a:link{
+      text-decoration: none;
+      color: black;
+    }
+
+      .page-title a:visited{
+        text-decoration: none;
+        color: black;
+      }
+
+      .page-title a:hover{
+        color:#72d4d4;
+      }
+
+      .box h1:hover{
+        color:#288484;
+      }
+
+      .explain:hover{
+        color:#288484;
+
+      }
+
+    </style>
+
+    <meta charset="utf-8">
+
+    <title>Home</title>
+  <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  </head>
+  
+  <body>
+    
+    <div class="navbar">
+      <h1  style="color: white; font-size: 80px;" align="center">ECHO</h1>
+      <a href="./home.html" >Home</a>
+      <a href="./team.html" >Team</a>
+      <div class="dropdown">
+          <button class="dropbtn">Analyze
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+                <a href="./analyze.html" >General Pipeline</a>
+                <a href="./individual_pages/genome_assembly.html" target="_parent">Genome Assembly</a>
+                <a href="./individual_pages/genome_prediction.html" target="_parent">Gene Prediction</a>
+                <a href="./individual_pages/functional_annotation.html" target="_parent">Functional Annotation</a>
+                <a href="./individual_pages/comparative_genomics.html" target="_parent">Comparative Genomics</a>
+            </div>
+        </div>
+        <a href="https://compgenomics2020.biosci.gatech.edu/Main_Page" target="_parent">Wiki</a>
+        <a href="class_results.html" target="_parent">Class results</a>
+    </div>
+    
+    <div class="page-title">
+      <a href="./analyze.html" >
+      <h1> Analysis Pipeline </h1>
+    </a>
+    </div>
+
+    <div class="pipeline">
+      <a href="./individual_pages/genome_assembly.html" target="_parent">
+      <div class="box">
+        <p><h1 class="step">I. Genome Assembly</h1></p>
+        <p class="explain">align and merge raw reads to contigs</p>
+      </div>
+    </a>
+
+      <div class="box">
+        <a href="./individual_pages/genome_prediction.html" target="_parent">
+        <p><h1 class="step">II. Gene Prediction</h1></p>
+        <p class="explain">identify regions of the genomic DNA that encode genes</p>
+      </div>
+
+      <div class="box">
+        <a href="./individual_pages/functional_annotation.html" target="_parent">
+        <p><h1 class="step">III. Function Annotation</h1></p>
+        <p class="explain">obtain functional information of the genome</p>
+      </div>
+
+      <div class="box">
+        <a href="./individual_pages/comparative_genomics.html" target="_parent">
+        <p><h1 class="step">IV. Comparative Genomics</h1></p>
+        <p class="explain">compare genome features of different organisms</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>

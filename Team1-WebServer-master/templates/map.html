@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Outbreak Map</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel ="stylesheet" href = "./static/template.css">
+  <link rel="icon" href="https://img.icons8.com/color/96/000000/bacteria.png" />
+	<style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <h1  style="color: white; font-size: 80px;" align="center">ECHO</h1>
+    <a href="./home.html" >Home</a>
+    <a href="./team.html" >Team</a>
+    <div class="dropdown">
+        <button class="dropbtn">Analyze
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+              <a href="./analyze.html" >General Pipeline</a>
+              <a href="./individual_pages/genome_assembly.html" target="_parent">Genome Assembly</a>
+              <a href="./individual_pages/genome_prediction.html" target="_parent">Gene Prediction</a>
+              <a href="./individual_pages/functional_annotation.html" target="_parent">Functional Annotation</a>
+              <a href="./individual_pages/comparative_genomics.html" target="_parent">Comparative Genomics</a>
+          </div>
+      </div>
+    <a href="https://compgenomics2020.biosci.gatech.edu/Main_Page" target="_parent">Wiki</a>
+    <a href="class_results.html" target="_parent">Class results</a>
+  </div>
+
+
+
+  <div>
+    <h1 class="page-title"> Map Demo </h1>
+	</div>
+
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Georgia Tech
+  var gt = {lat:33.77583, lng: -84.39472};
+  // The map, centered at 
+  var usa = {lat:37.0902, lng: -95.7129};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: usa});
+  // The marker, positioned at gt
+  var marker = new google.maps.Marker({position: gt, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMyzUhTAT0JltFXe19I_Y9nMlL7RAKN5w&callback=initMap">
+    </script>
+
+</body>
+
+</html>
+
