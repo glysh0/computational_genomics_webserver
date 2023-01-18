@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel ="stylesheet" href = "../static/template.css">
+    <link rel="icon" href="https://img.icons8.com/color/96/000000/bacteria.png" />
+    <title>Genome Assembly</title>
+    <style>
+      body{
+      margin:0px;
+      padding:0px;
+      text-align:center;
+      }
+
+      .row{
+      clear: both;
+      position: relative;
+      left:35%;
+      width:600px;
+      text-align: left;
+      }
+
+      .row::before, .row::after{
+        content:"";
+      }
+
+      .col{
+        float:left;
+        width:50%;
+        text-align: center;
+
+      }
+
+      .step{
+        text-align: center;
+        font-family: "Cambria";
+        font-size: 20px;
+        color: black;
+        /*color: #add8e6;*/
+      }
+
+      .instruction{
+        font-family: "Cambria";
+        font-size: 18px;
+        color: black;
+        padding-bottom: 20px;
+        /*color: #add8e6;*/
+      }
+
+      .button{
+        border-radius: 7px;
+        /*color: #58666e;*/
+        background-color: #72d4d4;
+        border-color:#3abfbf;
+        padding:5px;
+        box-shadow: none;
+        font-family: "Cambria";
+        font-size: 18px;
+        border-style: solid;
+        /*border-color: #dee5e7;*/
+        /*border-bottom-color: #d8e1e3;*/
+
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="navbar">
+      <h1  style="color: white; font-size: 80px;" align="center">ECHO</h1>
+      <a href="../home.html" >Home</a>
+      <a href="../team.html" >Team</a>
+      <div class="dropdown">
+          <button class="dropbtn">Analyze
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+                <a href="../analyze.html" >General Pipeline</a>
+                <a href="./genome_assembly.html" target="_parent">Genome Assembly</a>
+                <a href="./genome_prediction.html" target="_parent">Gene Prediction</a>
+                <a href="./functional_annotation.html" target="_parent">Functional Annotation</a>
+                <a href="./comparative_genomics.html" target="_parent">Comparative Genomics</a>
+            </div>
+        </div>
+      <a href="https://compgenomics2020.biosci.gatech.edu/Main_Page" target="_parent">Wiki</a>
+      <a href="../class_results.html" target="_parent">Class results</a>
+    </div>
+<!--     <div class="tophead">
+      <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=auto src="../template.html" width="100%"  height="auto">
+    </iframe>
+   </div> -->
+
+<!-- <h3><center>GENOME ASSEMBLY</center></h3> -->
+
+  <div>
+    <h1 class="page-title"> Genome Assembly </h1>
+  </div>
+
+  <div>
+    <h1 class="step">If you have sample(s) with pair-end reads</h1>
+  </div>
+
+  <div class=row>
+    
+      <div class="instruction">
+        <form action="./upload_sequence.py">
+          <label>Upload a compressed folder:</label>
+          <input type="file" id="myFile" name="filename"><br>
+          <span style="color:#aaa; font-style:italic; font-size:15px ">
+            (a .tar.gz file containing all sample(s), each sample has a<br>
+            pair of fq or .fq.gz read files named with same sampleID,<br>
+            e.g. sampleID_1.fq.gz and sampleID_2.fq.gz)
+          </span>
+        </form>
+      </div>
+
+  </div>
+
+  <div class=row>
+    <div class="instruction">
+      <label>Metadata:</label>
+      <input type="file" id="metadata" name="metadata"><br>
+      <span style="color:#aaa; font-style:italic; font-size:15px ">
+      (a tab-delimited file, e.g. .txt file, containing sampleID, location, sampled date, etc.)</span>
+    </div>
+  </div>
+
+  <div class=row>
+    <div class="instruction">
+      <form>
+        <label>Tool:</label>
+        <input type="radio" id="Unicycler" name="tool" value="Unicycler" checked>
+        <label for="Unicycler">Unicycler</label>
+        <input type="radio" id="Spades" name="tool" value="Spades">
+        <label for="Spades">Spades</label><br>
+        <span style="color:#aaa; font-style:italic; font-size:15px ">
+          (default: Unicycler)
+        </span>
+     </form>
+    </div>
+  </div>
+
+  <div class=row>
+    <div class="instruction">
+      <form>
+        <label>Trimming reads:</label>
+        <input type="radio" name="trimming" value="yes" checked>Yes
+        <input type="radio" name="trimming" value="no">No<br>
+        <span style="color:#aaa; font-style:italic; font-size:15px ">
+          (default: yes)
+        </span>
+     </form>
+    </div>
+  </div>
+
+  <div class=row>
+    <div class="instruction">
+      <form>
+        <label>Kmer size:</label>
+        <input type="text" name="kmer"><br>
+        <span style="color:#aaa; font-style:italic; font-size:15px ">
+          (default: decided by Unicycler after processing the files)
+        </span>
+     </form>
+    </div>
+  </div>
+
+  </div>
+
+  <div class=row>
+    <div class="instruction">
+      <label>Email:</label>
+      <input type="text" id="email" name="emailaddress"><br>
+      <span style="color:#aaa; font-style:italic; font-size:15px ">
+      (Required for receiving results)</span>
+    </div>
+  </div>
+
+  <div class="instruction">
+    <button style="padding-left:7%; padding-right:7%;" type="submit" class="button btn btn-addon btn-success" ng-click="job_start(); reset_form();"><p class="" style="color: #fffaf0;">Run</p></button>
+  </div>
+
+  </body>
+</html>
