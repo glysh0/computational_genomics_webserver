@@ -1,0 +1,104 @@
+<<<<<<< HEAD
+h1 {
+    background-color: black;
+    font-color: white;
+    style="font-size: 20px;"
+
+   }
+
+=======
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-title{
+text-align: center;
+font-family: "Cambria";
+font-size: 28px;
+}
+
+.navbar {
+  background-image: url('https://cdn.mos.cms.futurecdn.net/kJjwg4h2ULvghvsHFT62HU-650-80.jpg');
+  overflow: hidden;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: visible;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a blue background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #2a9df4;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  overflow: visible;
+  position:fixed; z-index:9999;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+a:link{
+text-decoration: none;
+}
+
+a:visited{
+text-decoration: none;
+}
+
+>>>>>>> d1682ab22b643a2473ff11ae790f475e59b0736e
+input{
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
