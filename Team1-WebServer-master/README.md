@@ -24,4 +24,8 @@ The Web Server group members for Team 1 are:
   * Priya Narayanan
   * Winnie Zheng  
  
- 2020.Apr.24th
+
+## Wiki page  
+https://compgenomics2020.biosci.gatech.edu/Team_I_Webserver_Group  
+  
+2020.Apr.24th
